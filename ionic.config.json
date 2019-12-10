@@ -1,5 +1,7 @@
 {
   "name": "restoListas",
-  "integrations": {},
+  "integrations": {
+    "cordova": {}
+  },
   "type": "angular"
 }

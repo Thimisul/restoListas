@@ -1,0 +1,22 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>Brilho</ion-title>
+    <ion-buttons slot="start">
+      <ion-menu-button></ion-menu-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+
+  <ion-item>
+    <ion-label>Digite valor de 1 a 10: </ion-label>
+    <ion-input type='number' [(ngModel)]="value"></ion-input>
+  </ion-item>
+  <ion-item>
+    <ion-button (click)="setValue()">
+      Emviar
+    </ion-button>
+  </ion-item>
+
+</ion-content>

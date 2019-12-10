@@ -14,6 +14,14 @@ const routes: Routes = [
   {
     path: 'list',
     loadChildren: () => import('./list/list.module').then(m => m.ListPageModule)
+  },
+  {
+    path: 'lista8/ex2',
+    loadChildren: () => import('./lista8/ex2/ex2.module').then( m => m.Ex2PageModule)
+  },
+  {
+    path: 'lista8/ex3',
+    loadChildren: () => import('./lista8/ex3/ex3.module').then( m => m.Ex3PageModule)
   }
 ];
 
