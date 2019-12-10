@@ -1,0 +1,36 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>registro</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+
+  <ion-list>
+    <ion-item>
+      <ion-label position="floating">Nome</ion-label>
+      <ion-input [(ngModel)]="usuario.nome"></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label position="floating">Email do Usuario</ion-label>
+      <ion-input [(ngModel)]="usuario.email"></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label position="floating">Senha</ion-label>
+      <ion-input [(ngModel)]="usuario.senha" type="password"></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label>Foto</ion-label>
+      <ion-img [src]="usuario.foto"></ion-img>
+      <ion-button size="large" expand="block" fill="outline" (click)="getFoto()">
+        <ion-icon slot="start" name="picture"></ion-icon>
+        <ion-label> Foto </ion-label>
+      </ion-button>
+    </ion-item>
+    <ion-button size="large" expand="block" fill="outline" (click)="login()">
+      <ion-icon slot="start" name="lock"></ion-icon>
+      <ion-label> Login </ion-label>
+    </ion-button>
+  </ion-list>
+
+</ion-content>

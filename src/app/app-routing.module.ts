@@ -22,6 +22,22 @@ const routes: Routes = [
   {
     path: 'lista8/ex3',
     loadChildren: () => import('./lista8/ex3/ex3.module').then( m => m.Ex3PageModule)
+  },
+  {
+    path: 'login',
+    loadChildren: () => import('./lista9/login/login.module').then( m => m.LoginPageModule)
+  },
+  {
+    path: 'registro',
+    loadChildren: () => import('./lista9/registro/registro.module').then( m => m.RegistroPageModule)
+  },
+  {
+    path: 'noticias',
+    loadChildren: () => import('./lista9/noticias/noticias.module').then( m => m.NoticiasPageModule)
+  },
+  {
+    path: 'modal-noticia',
+    loadChildren: () => import('./lista9/modal-noticia/modal-noticia.module').then( m => m.ModalNoticiaPageModule)
   }
 ];
 
