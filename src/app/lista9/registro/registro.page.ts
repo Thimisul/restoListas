@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Camera } from '@ionic-native/camera/ngx'
+import { SqlProvider } from 'ionic-query-interface'
 
 @Component({
   selector: 'app-registro',
@@ -15,7 +16,8 @@ export class RegistroPage implements OnInit {
     foto: string
     logado: boolean
   }
-  constructor(public camera:Camera) { }
+  constructor(public camera:Camera,
+              public db:SqlProvider) { }
 
   ngOnInit() {
   }

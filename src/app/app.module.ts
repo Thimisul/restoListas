@@ -12,6 +12,11 @@ import { AppRoutingModule } from './app-routing.module';
 import { Camera } from '@ionic-native/camera/ngx'
 
 import {  HttpClientModule, HttpClientJsonpModule } from '@angular/common/http';
+import { SMS } from '@ionic-native/sms/ngx'
+import { SocialSharing } from '@ionic-native/social-sharing/ngx'
+import { SQLite } from '@ionic-native/sqlite/ngx'
+import { SqlProvider } from 'ionic-query-interface'
+
 
 @NgModule({
   declarations: [AppComponent],
@@ -27,6 +32,10 @@ import {  HttpClientModule, HttpClientJsonpModule } from '@angular/common/http';
     StatusBar,
     SplashScreen,
     Camera,
+    SMS,
+    SocialSharing,
+    SQLite,
+    SqlProvider,
     { provide: RouteReuseStrategy, useClass: IonicRouteStrategy }
   ],
   bootstrap: [AppComponent]
