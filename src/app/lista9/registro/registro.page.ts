@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Camera } from '@ionic-native/camera/ngx'
 
 @Component({
   selector: 'app-registro',
@@ -7,9 +8,26 @@ import { Component, OnInit } from '@angular/core';
 })
 export class RegistroPage implements OnInit {
 
-  constructor() { }
+  public usuario: {
+    nome: string,
+    email: string,
+    password: string,
+    foto: string
+    logado: boolean
+  }
+  constructor(public camera:Camera) { }
 
   ngOnInit() {
   }
 
+  async tirarFoto(){
+    let opcoes = {
+      quality: 95,
+      detinationType: this.camera.DestinationType.DATA_URL,
+      encodyngType: this.camera.EncodingType.JPEG,
+      mediaType: this.camera.MediaType.PICTURE
+    }
+    let captura = await this.camera.getPicture(opcoes);
+    this.usuario.foto = 'data:image/jpeg;base64,' + captura;
+  }
 }

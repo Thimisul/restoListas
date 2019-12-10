@@ -8,6 +8,8 @@ import { NoticiasPageRoutingModule } from './noticias-routing.module';
 
 import { NoticiasPage } from './noticias.page';
 
+import { ModalNoticiaPage } from '../modal-noticia/modal-noticia.page';
+
 @NgModule({
   imports: [
     CommonModule,
@@ -15,6 +17,6 @@ import { NoticiasPage } from './noticias.page';
     IonicModule,
     NoticiasPageRoutingModule
   ],
-  declarations: [NoticiasPage]
+  declarations: [NoticiasPage, ModalNoticiaPage],
 })
 export class NoticiasPageModule {}
