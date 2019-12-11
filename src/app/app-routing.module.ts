@@ -24,19 +24,19 @@ const routes: Routes = [
     loadChildren: () => import('./lista8/ex3/ex3.module').then( m => m.Ex3PageModule)
   },
   {
-    path: 'login',
+    path: 'lista9/login',
     loadChildren: () => import('./lista9/login/login.module').then( m => m.LoginPageModule)
   },
   {
-    path: 'registro',
+    path: 'lista9/registro',
     loadChildren: () => import('./lista9/registro/registro.module').then( m => m.RegistroPageModule)
   },
   {
-    path: 'noticias',
+    path: 'lista9/noticias',
     loadChildren: () => import('./lista9/noticias/noticias.module').then( m => m.NoticiasPageModule)
   },
   {
-    path: 'modal-noticia',
+    path: 'lista9/modal-noticia',
     loadChildren: () => import('./lista9/modal-noticia/modal-noticia.module').then( m => m.ModalNoticiaPageModule)
   }
 ];
