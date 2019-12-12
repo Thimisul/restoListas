@@ -38,8 +38,8 @@ export class Ex1Page implements OnInit {
 
 async loadMap(lat, lng){
   Environment.setEnv({
-    'API_KEY_FOR_BROWSER_RELEASE': 'AIzaSyA4y6tlWS_3IQNXgRl8mUQuRh1i9RGKc3c',
-    'API_KEY_FOR_BROWSER_DEBUG': 'AIzaSyA4y6tlWS_3IQNXgRl8mUQuRh1i9RGKc3c'
+    'API_KEY_FOR_BROWSER_RELEASE': 'api key',
+    'API_KEY_FOR_BROWSER_DEBUG': ' api key'
   })
   const mapOptions = {
     mapType: 'MAP_TYPE_NORMAL',
