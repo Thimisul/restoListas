@@ -17,6 +17,8 @@ import { SocialSharing } from '@ionic-native/social-sharing/ngx'
 import { SQLite } from '@ionic-native/sqlite/ngx'
 import { SqlProvider } from 'ionic-query-interface'
 
+import { GoogleMaps, Marker, GoogleMap } from '@ionic-native/google-maps/ngx'
+
 
 @NgModule({
   declarations: [AppComponent],
@@ -36,7 +38,8 @@ import { SqlProvider } from 'ionic-query-interface'
     SocialSharing,
     SQLite,
     SqlProvider,
-    { provide: RouteReuseStrategy, useClass: IonicRouteStrategy }
+    { provide: RouteReuseStrategy, useClass: IonicRouteStrategy },
+    GoogleMaps
   ],
   bootstrap: [AppComponent]
 })

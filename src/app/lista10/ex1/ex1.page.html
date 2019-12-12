@@ -1,0 +1,20 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>ex1</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+<ion-list>
+  <ion-button (click)="getUtfpr()">
+    Utfpr
+  </ion-button>
+ <ion-input type="text" placeholder="Pesquisa" [(ngModel)]="searach_address"></ion-input>
+ <ion-button (click)="geocoding()">
+   <ion-icon slot="icon-only" name="search"></ion-icon>
+ </ion-button>
+</ion-list>
+<ion-label>Mapa: </ion-label>
+<div id="map_canvas"></div>
+
+</ion-content>

@@ -38,6 +38,14 @@ const routes: Routes = [
   {
     path: 'lista9/modal-noticia',
     loadChildren: () => import('./lista9/modal-noticia/modal-noticia.module').then( m => m.ModalNoticiaPageModule)
+  },
+  {
+    path: 'lista10/ex1',
+    loadChildren: () => import('./lista10/ex1/ex1.module').then( m => m.Ex1PageModule)
+  },
+  {
+    path: 'profile-model',
+    loadChildren: () => import('./lista10/profile-model/profile-model.module').then( m => m.ProfileModelPageModule)
   }
 ];
 
