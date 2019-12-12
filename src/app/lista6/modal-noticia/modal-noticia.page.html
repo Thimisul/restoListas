@@ -1,0 +1,25 @@
+<ion-header>
+  <ion-toolbar>
+      <ion-buttons slot="end">
+          <ion-button (click)="close()">
+            <ion-icon name="close"></ion-icon>
+          </ion-button>
+        </ion-buttons>
+    <ion-title>Noticia</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+
+    <ion-card>
+        <ion-card-header>
+          <ion-img [src]=noticia.thumbmail></ion-img>
+          <ion-card-subtitle>{{noticia.section}}</ion-card-subtitle>
+          <ion-card-title>{{noticia.title}}</ion-card-title>
+        </ion-card-header>
+        <ion-card-content>
+          {{noticia.bodyText}}
+        </ion-card-content>
+      </ion-card>
+      
+</ion-content>

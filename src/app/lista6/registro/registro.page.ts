@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { SqlProvider } from 'ionic-query-interface';
 import { Camera } from '@ionic-native/camera/ngx'
-import { SqlProvider } from 'ionic-query-interface'
 
 @Component({
   selector: 'app-registro',
@@ -11,21 +11,20 @@ export class RegistroPage implements OnInit {
 
   usuarios = []
 
-  isLogado = false
-
   public usuario = {
+    id: '',
     nome: '',
     email: '',
     password: '',
-    foto: ''
+    foto: '',
+    logado: 0
   }
   constructor(public camera:Camera,
-              public db:SqlProvider) { 
-              }
+              public db:SqlProvider) { }
 
-  async ngOnInit() {
-    await this.db.open('usuarios.db')
-    //await this.definirTabela()
+  ngOnInit() {
+    this.db.open('lista9.db')
+    this.definirTabela()
   }
 
   async getFoto(){
@@ -37,22 +36,20 @@ export class RegistroPage implements OnInit {
     }
     let captura = await this.camera.getPicture(opcoes);
     this.usuario.foto = 'data:image/jpeg;base64,' + captura;
-    
   }
 
   async registrar(){
     const id = await this.db.table('usuarios').insert(this.usuario);
-   
+    this.usuarios.push({id, ...this.usuario})
   }
 
   async definirTabela(){
-    await this.db.createTable('usuario',{
+    await this.db.createTable('usuarios',{
       nome: 'text',
       email: 'text',
       password: 'text',
       foto: 'text',
+      logado: 'integer'
     })
   }
-
-  
 }

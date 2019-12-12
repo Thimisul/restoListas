@@ -38,8 +38,8 @@ export class Ex1Page implements OnInit {
 
 async loadMap(lat, lng){
   Environment.setEnv({
-    'API_KEY_FOR_BROWSER_RELEASE': 'api key',
-    'API_KEY_FOR_BROWSER_DEBUG': ' api key'
+    'API_KEY_FOR_BROWSER_RELEASE': 'AIzaSyA4y6tlWS_3IQNXgRl8mUQuRh1i9RGKc3c',
+    'API_KEY_FOR_BROWSER_DEBUG': 'AIzaSyA4y6tlWS_3IQNXgRl8mUQuRh1i9RGKc3c'
   })
   const mapOptions = {
     mapType: 'MAP_TYPE_NORMAL',
@@ -113,15 +113,18 @@ async openProfile(){
 }
 
 geocoding(){
+
   Geocoder.geocode({
     "address": this.search_address
   }).then((results:GeocoderResult[]) => {
     console.log(results);
-
-    return this.map.addMarker({
-      'position': results[0].position,
-      'title': JSON.stringify(results[0].position)
-    })
+    let options: MarkerOptions = {
+      icon: 'BLUE',
+      animation: 'DROP',
+      position: results[0].position,
+      title: JSON.stringify(results[0].position)
+    }
+    return this.map.addMarkerSync(options)
   })
 }
 

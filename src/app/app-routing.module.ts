@@ -40,12 +40,16 @@ const routes: Routes = [
     loadChildren: () => import('./lista9/modal-noticia/modal-noticia.module').then( m => m.ModalNoticiaPageModule)
   },
   {
-    path: 'lista10/ex1',
-    loadChildren: () => import('./lista10/ex1/ex1.module').then( m => m.Ex1PageModule)
+    path: 'lista9/ex1',
+    loadChildren: () => import('./lista6/ex1/ex1.module').then( m => m.Ex1PageModule)
   },
   {
     path: 'profile-model',
     loadChildren: () => import('./lista10/profile-model/profile-model.module').then( m => m.ProfileModelPageModule)
+  },
+  {
+    path: 'registro',
+    loadChildren: () => import('./lista9/registro/registro.module').then( m => m.RegistroPageModule)
   }
 ];
 

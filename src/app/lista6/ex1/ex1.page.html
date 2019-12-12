@@ -1,0 +1,22 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>Lista 6 {{section.params}}</ion-title>
+    <ion-buttons slot="start">
+      <ion-menu-button></ion-menu-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+<div *ngIf="noticias != []">
+  <ion-card *ngFor="let noticia of noticias">
+    <ion-card-header>
+      <ion-card-subtitle> {{noticia.categoria}} </ion-card-subtitle>
+      <ion-card-title>{{noticia.titulo}}</ion-card-title>
+    </ion-card-header>
+    <ion-button (click)="openNoticia(noticia.titulo, noticia.texto, noticia.categoria , noticia.thumbmail)">Ler noticia</ion-button>
+  </ion-card>
+</div>
+
+
+</ion-content>
